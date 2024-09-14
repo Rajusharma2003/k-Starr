@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between p-4 h-24">
         {/* Logo */}
         <div className="text-xl font-bold">
-          <Link to="/" className="flex items-center">
+          <Link to="/" onClick={handleScrollToTop} className="flex items-center">
             <img src={logo} alt="Logo" className="lg:w-64 lg:h-64 w-1/2 h-1/2 mr-2 lg:mb-4" />
             {/* <img src={logo} alt="Logo" className="lg:w-64 lg:h-64  md:w-64 md:h-64 md:ml-[-70px]  w-1/2 h-1/2 mr-2 lg:mb-4" /> */}
             {/* <span>Logo</span> */}

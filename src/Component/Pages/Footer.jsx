@@ -1,9 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowUp, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
+
+  useEffect(() => {
+    // Create a script element
+    const script = document.createElement('script');
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.setAttribute('data-use-service-core', '');
+    script.defer = true;
+
+    // Append the script to the body or the specific div
+    document.body.appendChild(script);
+
+    // Cleanup the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -29,11 +47,10 @@ const Footer = () => {
             <p className="mb-4">Mail: <a href="mailto:smarthomeappliances84@gmail.com" className="hover:text-green-400 transition-colors">smarthomeappliances84@gmail.com</a></p>
 
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold">Sign up for K-Starr updates</h3>
-              <p className="mb-4">Subscribe to our newsletter for the latest updates, products, and insights:</p>
-              <input type="email" placeholder="Enter your email ID here" className="p-3 w-full max-w-xs text-black rounded-lg" />
-              <button className="bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 transition-colors">Subscribe</button>
-            </div>
+            <h3 className="text-xl font-semibold">Sign up for K-Starr updates</h3>
+            {/* Elfsight App div */}
+            <div className="elfsight-app-10631eae-f86f-4d9d-83ac-914d8a8c3525" data-elfsight-app-lazy></div>
+          </div>
           </div>
 
           {/* Social Media */}

@@ -6,16 +6,19 @@ import 'react-intersection-observer'; // Import polyfill if needed
 
 // import image here.
 import aboutImg from '../../Images/AboutBannner.jpg';
-import productImg from '../../Images/Kproduct.jpg';
 import aboutBanner from '../../Images/kAbout.jpg';
-
-
+import p1 from '../../Images/kp1.jpg';
+import p2 from '../../Images/p2.jpg';
+import p3 from '../../Images/p3.jpg';
+import p4 from '../../Images/p4.jpg';
+import p5 from '../../Images/p5.jpg';
+import p6 from '../../Images/p6.jpg';
 
 import Footer from './Footer';
 
 
-
 const AboutPage = () => {
+  
   const [activeSection, setActiveSection] = useState(null);
   const sectionsRef = useRef({});
 
@@ -44,32 +47,32 @@ const AboutPage = () => {
 
   const productData = [
     {
-      imgSrc: productImg,
+      imgSrc: p1,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p2,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p3,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p4,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p5,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p6,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
@@ -101,7 +104,6 @@ const AboutPage = () => {
 
   return (
     <>
-
     
     {/* This is the main image */}
     <div className='w-full overflow-hidden'>
@@ -174,7 +176,7 @@ const AboutPage = () => {
                 <h1 className="text-xl font-semibold">{product.title}</h1>
                 <p className="text-gray-700">{product.description}</p>
                 <a
-                  href="https://wa.me/your-whatsapp-number" // Replace with your WhatsApp number
+                  href="https://wa.me/+918130405294" // Replace with your WhatsApp number
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
@@ -188,12 +190,12 @@ const AboutPage = () => {
       </div>
 
 
-    {/* This details section */}
-    <div className="w-full p-4 h-full bg-[#F5EDE7]">
-      <h1 className="text-center text-4xl font-bold mb-8 mt-10">
+ {/* This details section */}
+ <div className="w-full p-4 h-full bg-[#F5EDE7]" id="details" ref={(el) => (sectionsRef.current['details'] = el)}>
+      <h1 className={` text-center text-4xl font-bold mb-8 mt-10 ${activeSection === 'details' ? 'animate__animated animate__fadeInUp' : ''}`} >
         Designed for Better Cooking <br /> Experience
       </h1>
-      <div className="flex flex-wrap sm:flex-wrap lg:flex-nowrap justify-center items-center space-x-6">
+      <div className={`flex flex-wrap sm:flex-wrap lg:flex-nowrap justify-center items-center space-x-6 ${activeSection === 'details' ? 'animate__animated animate__fadeInUp' : ''}`}>
         {data.map((item, index) => (
           <div
             key={index}

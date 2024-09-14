@@ -10,7 +10,6 @@ import 'react-intersection-observer'; // Import polyfill if needed
 import BannerImg from '../../Images/KSBanner.jpg';
 import aboutImg from '../../Images/AboutBannner.jpg';
 import heroImg from '../../Images/kHeroBanner.jpg';
-import productImg from '../../Images/Kproduct.jpg';
 import svg1 from '../../Images/svg1.jpg';
 import svg2 from '../../Images/svg2.jpg';
 import svg3 from '../../Images/svg3.jpg';
@@ -140,6 +139,7 @@ const HomePage = () => {
 
   return (
     <>
+
       {/* Main Banner Image */}
       <div className='w-full overflow-hidden' id="banner" ref={(el) => (sectionsRef.current['banner'] = el)}>
         <img 
@@ -156,7 +156,7 @@ const HomePage = () => {
           <img 
             src={aboutImg} 
             alt="About Spalin Appliances" 
-            className={`w-full h-auto rounded-lg ${activeSection === 'about' ? 'animate__animated animate__fadeInLeft' : ''}`} 
+            className={`w-full h-auto rounded-lg ${activeSection === 'about' ? 'animate__animated animate__flipInY' : ''}`} 
           />
         </div>
 

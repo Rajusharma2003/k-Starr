@@ -1,46 +1,81 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-
+import React, { useEffect, useRef, useState } from 'react'
+import { FaCheck } from 'react-icons/fa';
 
 // import image.
-import pBanner from '../../Images/pBanner.jpg'
-import productImg from '../../Images/Kproduct.jpg';
-import { FaCheck } from 'react-icons/fa';
+import pBanner from '../../Images/pBanner.jpg';
+import p1 from '../../Images/kp1.jpg';
+import p2 from '../../Images/p2.jpg';
+import p3 from '../../Images/p3.jpg';
+import p4 from '../../Images/p4.jpg';
+import p5 from '../../Images/p5.jpg';
+import p6 from '../../Images/p6.jpg';
+
+// import footer here.
 import Footer from './Footer';
+
+// import animate.
+import 'react-intersection-observer'; // Import polyfill if needed
+import 'animate.css';
+
 
 
 const ProductsPage = () => {
 
+  const [activeSection, setActiveSection] = useState(null);
+  const sectionsRef = useRef({});
+
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0,
+    });
+
+    Object.keys(sectionsRef.current).forEach((key) => {
+      observer.observe(sectionsRef.current[key]);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // This is the product data.
   const productData = [
     {
-      imgSrc: productImg,
+      imgSrc: p1,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p2,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p3,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p4,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p5,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
     {
-      imgSrc: productImg,
+      imgSrc: p6,
       title: 'INFRARED COOKTOP',
       description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
     },
@@ -85,25 +120,25 @@ const ProductsPage = () => {
   return (
     <>
     
-    {/* This is the main image */}
-      <div className='w-full overflow-hidden'>
-      <img 
-        src={pBanner}
-        alt="BannerImage" 
-        className='w-full h-auto' 
-      />
+    {/* Main Banner Image */}
+    <div className='w-full overflow-hidden' id="banner" ref={(el) => (sectionsRef.current['banner'] = el)}>
+        <img 
+          src={pBanner} 
+          alt="BannerImage" 
+          className={`w-full h-auto ${activeSection === 'banner' ? 'animate__animated animate__fadeIn' : ''}`} 
+        />
     </div>
 
    
-    {/* This is product section */}
-      <div className="py-8 px-4 mt-10">
-        <h1 className="text-4xl font-bold text-center mb-8">Products</h1>
+    {/* This is the product section */}
+    <div className="py-8 px-4 mt-10" id="products" ref={(el) => (sectionsRef.current['products'] = el)}>
+        <h1 className={`animate__animated text-5xl font-bold text-center mb-8 ${activeSection === 'products' ? 'animate__fadeInUp' : ''}`}>Products</h1>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8">
             {productData.map((product, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center p-6 space-y-4 w-full"
+                className={`bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center p-6 space-y-4 w-full ${activeSection === 'products' ? 'animate__animated animate__fadeInUp' : ''}`}
               >
                 <img
                   src={product.imgSrc}
@@ -113,10 +148,10 @@ const ProductsPage = () => {
                 <h1 className="text-xl font-semibold">{product.title}</h1>
                 <p className="text-gray-700">{product.description}</p>
                 <a
-                  href="https://wa.me/8130405294" // Replace with your WhatsApp number
+                  href="https://wa.me/+918130405294" // Replace with your WhatsApp number
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
+                  className="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
                 >
                   <span>Enquiry Now</span>
                 </a>
@@ -126,36 +161,35 @@ const ProductsPage = () => {
         </div>
       </div>
 
-
-  {/* This is specification section */}
-  <div className="p-8 md:p-16 lg:p-32  text-white shadow-sm mt-10">
-    <h1 className="text-3xl md:text-4xl font-bold text-center mt-10 mb-16 text-black">Specifications</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-      {specs.map((spec, index) => (
-        <div
-          key={index}
-          className="flex items-center p-4 rounded-md bg-gray-900 border-b-4 border-gray-700"
-        >
-          <div className="flex-1 flex justify-between items-center">
-            <div className="flex-1">
-              <h2 className="text-xl md:text-2xl font-semibold mb-2">{spec.title}</h2>
-              <p className="text-gray-300 text-sm md:text-base">{spec.value}</p>
+    {/* Specifications Section */}
+    <div className="p-8 md:p-16 lg:p-32 text-white shadow-sm mt-10" id="specs" ref={(el) => (sectionsRef.current['specs'] = el)}>
+        <h1 className={`text-3xl md:text-4xl font-bold text-center mt-10 mb-14 text-black ${activeSection === 'specs' ? 'animate__animated animate__fadeInUp' : ''}`}>Specifications</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          {specs.map((spec, index) => (
+            <div
+              key={index}
+              className={`flex items-center p-4 rounded-md bg-gray-900 border-b-4 border-gray-700 ${activeSection === 'specs' ? 'animate__animated animate__fadeInUp' : ''}`}
+            >
+              <div className="flex-1 flex justify-between items-center">
+                <div className="flex-1">
+                  <h2 className="text-xl md:text-2xl font-semibold mb-2">{spec.title}</h2>
+                  <p className="text-gray-300 text-sm md:text-base">{spec.value}</p>
+                </div>
+                <div className="ml-4 flex-shrink-0">
+                  <FaCheck className="text-green-400 text-lg md:text-xl" />
+                </div>
+              </div>
             </div>
-            <div className="ml-4 flex-shrink-0">
-              <FaCheck className="text-green-400 text-lg md:text-xl"/>
-            </div>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
+      </div>
 
-  {/* This details section */}
-    <div className="w-full p-4 h-full bg-[#F5EDE7]">
-      <h1 className="text-center text-4xl font-bold mb-8 mt-10">
+    {/* This details section */}
+    <div className="w-full p-4 h-full bg-[#F5EDE7]" id="details" ref={(el) => (sectionsRef.current['details'] = el)}>
+      <h1 className={` text-center text-4xl font-bold mb-8 mt-10 ${activeSection === 'details' ? 'animate__animated animate__fadeInUp' : ''}`} >
         Designed for Better Cooking <br /> Experience
       </h1>
-      <div className="flex flex-wrap sm:flex-wrap lg:flex-nowrap justify-center items-center space-x-6">
+      <div className={`flex flex-wrap sm:flex-wrap lg:flex-nowrap justify-center items-center space-x-6 ${activeSection === 'details' ? 'animate__animated animate__fadeInUp' : ''}`}>
         {data.map((item, index) => (
           <div
             key={index}
@@ -170,9 +204,10 @@ const ProductsPage = () => {
     </div>
 
 
-  <div className='mt-10'>
-    <Footer/>
-  </div>
+    <div className='mt-10'>
+      <Footer/>
+    </div>
+
 
     </>
   )
