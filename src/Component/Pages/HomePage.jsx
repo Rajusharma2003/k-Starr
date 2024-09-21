@@ -58,7 +58,7 @@ const HomePage = () => {
           imgSrc: svg1,
           title: 'Powered by Safe & Environment Friendly Infrared Technology',
           description:
-            'KENT Blaze Infrared Cooktop ensures a faster way of cooking than in traditional induction-based cooktop as it uses 2000W advanced infrared technology. It gives you high performance capacity and a quality which satisfies your needs.',
+            'Infrared Cooktop ensures a faster way of cooking than in traditional induction-based cooktop as it uses 2000W advanced infrared technology. It gives you high performance capacity and a quality which satisfies your needs.',
         },
         {
           imgSrc: svg2,
@@ -70,25 +70,25 @@ const HomePage = () => {
           imgSrc: svg3,
           title: 'Easy to Use 3 Preset Cooking Options',
           description:
-            'Designed with 3-present menus, KENT Blaze Infrared Cooktop lets you stir fry, barbeque, or make soup with just a simple touch of button. There also a function mode and timer settings that lets you adjust the temperature as your requirement.',
+            'Designed with 3-present menus, Infrared Cooktop lets you stir fry, barbeque, or make soup with just a simple touch of button. There also a function mode and timer settings that lets you adjust the temperature as your requirement.',
         },
         {
           imgSrc: svg4,
           title: 'Robust Construction For Durable Use',
           description:
-            'To ensure a long-lasting use, KENT Blaze Infrared Cooktop is made of high-quality ceramic infrared heating element that is not just durable but also adds elegance to your kitchen décor. It also has a stainless-steel frame that’s easy to clean.',
+            'To ensure a long-lasting use, Infrared Cooktop is made of high-quality ceramic infrared heating element that is not just durable but also adds elegance to your kitchen décor. It also has a stainless-steel frame that’s easy to clean.',
         },
         {
           imgSrc: svg5,
           title: 'Digital Function with LED Display',
           description:
-            'KENT Blaze Infrared features digital functions and LED display that not just makes it easy to use but also adds an elegant touch to your kitchen décor.',
+            'Infrared features digital functions and LED display that not just makes it easy to use but also adds an elegant touch to your kitchen décor.',
         },
         {
           imgSrc:svg6,
           title: 'Auto Shut-off Feature for Overheating Protection',
           description:
-            'Keeping in mind your utmost safety, KENT Blaze Infrared Cooktop is designed with auto shut-off feature that immediately cuts off the power supply in case the appliance gets overheated.',
+            'Keeping in mind your utmost safety, Infrared Cooktop is designed with auto shut-off feature that immediately cuts off the power supply in case the appliance gets overheated.',
         },
   ];
 
