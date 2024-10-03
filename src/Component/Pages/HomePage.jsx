@@ -16,12 +16,12 @@ import svg3 from '../../Images/svg3.jpg';
 import svg4 from '../../Images/svg4.jpg';
 import svg5 from '../../Images/svg5.jpg';
 import svg6 from '../../Images/svg6.jpg';
-import p1 from '../../Images/kp1.jpg';
-import p2 from '../../Images/p2.jpg';
-import p3 from '../../Images/p3.jpg';
-import p4 from '../../Images/p4.jpg';
-import p5 from '../../Images/p5.jpg';
-import p6 from '../../Images/p6.jpg';
+import p1 from '../../Images/worldchefp1.jpeg';
+import p2 from '../../Images/worldchefp2.jpeg';
+import p3 from '../../Images/worldchefp3.jpeg';
+import p4 from '../../Images/worldchefp4.jpeg';
+import p5 from '../../Images/worldchefp1.jpeg';
+import p6 from '../../Images/worldchefp2.jpeg';
 
 import Footer from './Footer';
 import Carousel from '../Carousel/Carousel';
@@ -106,32 +106,32 @@ const HomePage = () => {
             {
               imgSrc: p1,
               title: 'INFRARED COOKTOP',
-              description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+              description: 'world chef Infrared Cooktop Matte Finish 2000W'
             },
             {
               imgSrc: p2,
               title: 'INFRARED COOKTOP',
-              description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+              description: 'world chef Infrared Cooktop Matte Finish 2000W'
             },
             {
               imgSrc: p3,
               title: 'INFRARED COOKTOP',
-              description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+              description: 'world chef Infrared Cooktop Matte Finish 2000W'
             },
             {
               imgSrc: p4,
               title: 'INFRARED COOKTOP',
-              description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+              description: 'world chef Infrared Cooktop Matte Finish 2000W'
             },
             {
               imgSrc: p5,
               title: 'INFRARED COOKTOP',
-              description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+              description: 'world chef Infrared Cooktop Matte Finish 2000W'
             },
             {
               imgSrc: p6,
               title: 'INFRARED COOKTOP',
-              description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+              description: 'world chef Infrared Cooktop Matte Finish 2000W'
             },
             
   ];
