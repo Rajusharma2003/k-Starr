@@ -93,7 +93,7 @@ const HomePage = () => {
   ];
 
   const specs = [
-            { title: 'Product Name', value: 'KENT Blaze Infrared Cooktop' },
+            { title: 'Product Name', value: 'Infrared Cooktop' },
             { title: 'Product Code', value: '116116' },
             { title: 'Input Power Supply', value: 'Single Phase 230 V AC, 50 Hz' },
             { title: 'Total Power Consumption', value: '2000 W' },
