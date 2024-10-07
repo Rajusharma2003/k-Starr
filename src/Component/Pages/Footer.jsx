@@ -46,11 +46,7 @@ const Footer = () => {
             <p className="mb-4">Chat: <a href="https://wa.me/8178196053" className="hover:text-green-400 transition-colors">WhatsApp no: +918130405294</a></p>
             <p className="mb-4">Mail: <a href="mailto:smarthomeappliances84@gmail.com" className="hover:text-green-400 transition-colors">smarthomeappliances84@gmail.com</a></p>
 
-            {/* <div className="space-y-2">
-            <h3 className="text-xl font-semibold">Sign up for K-Starr updates</h3> */}
-            {/* Elfsight App div */}
-            {/* <div className="elfsight-app-10631eae-f86f-4d9d-83ac-914d8a8c3525" data-elfsight-app-lazy></div>
-          </div> */}
+           
           </div>
 
           {/* Social Media */}

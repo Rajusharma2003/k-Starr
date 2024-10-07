@@ -7,13 +7,9 @@ import 'react-intersection-observer'; // Import polyfill if needed
 // import image here.
 import aboutImg from '../../Images/AboutBannner.jpg';
 import aboutBanner from '../../Images/kAbout.jpg';
-import p1 from '../../Images/kp1.jpg';
-import p2 from '../../Images/p2.jpg';
-import p3 from '../../Images/p3.jpg';
-import p4 from '../../Images/p4.jpg';
-import p5 from '../../Images/p5.jpg';
-import p6 from '../../Images/p6.jpg';
 
+
+// This is the footer section.
 import Footer from './Footer';
 
 
@@ -45,39 +41,39 @@ const AboutPage = () => {
   }, []);
 
 
-  const productData = [
-    {
-      imgSrc: p1,
-      title: 'INFRARED COOKTOP',
-      description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
-    },
-    {
-      imgSrc: p2,
-      title: 'INFRARED COOKTOP',
-      description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
-    },
-    {
-      imgSrc: p3,
-      title: 'INFRARED COOKTOP',
-      description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
-    },
-    {
-      imgSrc: p4,
-      title: 'INFRARED COOKTOP',
-      description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
-    },
-    {
-      imgSrc: p5,
-      title: 'INFRARED COOKTOP',
-      description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
-    },
-    {
-      imgSrc: p6,
-      title: 'INFRARED COOKTOP',
-      description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
-    },
+  // const productData = [
+  //   {
+  //     imgSrc: p1,
+  //     title: 'INFRARED COOKTOP',
+  //     description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+  //   },
+  //   {
+  //     imgSrc: p2,
+  //     title: 'INFRARED COOKTOP',
+  //     description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+  //   },
+  //   {
+  //     imgSrc: p3,
+  //     title: 'INFRARED COOKTOP',
+  //     description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+  //   },
+  //   {
+  //     imgSrc: p4,
+  //     title: 'INFRARED COOKTOP',
+  //     description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+  //   },
+  //   {
+  //     imgSrc: p5,
+  //     title: 'INFRARED COOKTOP',
+  //     description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+  //   },
+  //   {
+  //     imgSrc: p6,
+  //     title: 'INFRARED COOKTOP',
+  //     description: 'Spalin ChefInfra Infrared Cooktop Matte Finish 2000W'
+  //   },
     
-  ];
+  // ];
 
   const data = [
     {
@@ -156,39 +152,6 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
-
-
-  {/* This is the product section */}
-  <div className="py-8 px-4 mt-10" id="products" ref={(el) => (sectionsRef.current['products'] = el)}>
-        <h1 className={`animate__animated text-5xl font-bold text-center mb-8 ${activeSection === 'products' ? 'animate__fadeInUp' : ''}`}>Products</h1>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8">
-            {productData.map((product, index) => (
-              <div
-                key={index}
-                className={`bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center p-6 space-y-4 w-full ${activeSection === 'products' ? 'animate__animated animate__fadeInUp' : ''}`}
-              >
-                <img
-                  src={product.imgSrc}
-                  alt={product.title}
-                  className="w-full h-64 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300 ease-in-out"
-                />
-                <h1 className="text-xl font-semibold">{product.title}</h1>
-                <p className="text-gray-700">{product.description}</p>
-                <a
-                  href="https://wa.me/+918130405294" // Replace with your WhatsApp number
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
-                >
-                  <span>Enquiry Now</span>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
 
  {/* This details section */}
  <div className="w-full p-4 h-full bg-[#F5EDE7]" id="details" ref={(el) => (sectionsRef.current['details'] = el)}>
