@@ -19,9 +19,9 @@ import svg6 from '../../Images/svg6.jpg';
 import p1 from '../../Images/worldchefp1.jpeg';
 import p2 from '../../Images/worldchefp2.jpeg';
 import p3 from '../../Images/worldchefp3.jpeg';
-import p4 from '../../Images/worldchefp4.jpeg';
-import p5 from '../../Images/worldchefp1.jpeg';
-import p6 from '../../Images/worldchefp2.jpeg';
+import p4 from '../../Images/product1.png';
+import p5 from '../../Images/product5.png';
+import p6 from '../../Images/P6.jpg';
 
 import Footer from './Footer';
 import Carousel from '../Carousel/Carousel';
@@ -106,32 +106,86 @@ const HomePage = () => {
             {
               imgSrc: p1,
               title: 'INFRARED COOKTOP',
-              description: 'world chef Infrared Cooktop Matte Finish 2000W'
+              description: 'MODEL NO : SK1100 ',
+              features: [
+                '3 preset menu',
+                'Adjustable power mode',
+                'Feather touch Control dial',
+                'Infrared heating coil',
+                'Made of high quality ceramic',
+                'Stainless-steel frame that\'s easy to clean',
+                'Suitable for all kinds of utensils'
+              ]
             },
             {
               imgSrc: p2,
               title: 'INFRARED COOKTOP',
-              description: 'world chef Infrared Cooktop Matte Finish 2000W'
+              description: 'MODEL NO : SK1200 ',
+              features: [
+                '3 preset menu',
+                'Adjustable power mode',
+                'Feather touch Control dial',
+                'Infrared heating coil',
+                'Made of high quality ceramic',
+                'Stainless-steel frame that\'s easy to clean',
+                'Suitable for all kinds of utensils'
+              ]
             },
             {
               imgSrc: p3,
               title: 'INFRARED COOKTOP',
-              description: 'world chef Infrared Cooktop Matte Finish 2000W'
+              description: 'MODEL NO : SK1100 ',
+              features: [
+                '3 preset menu',
+                'Adjustable power mode',
+                'Feather touch Control dial',
+                'Infrared heating coil',
+                'Made of high quality ceramic',
+                'Stainless-steel frame that\'s easy to clean',
+                'Suitable for all kinds of utensils'
+              ]
             },
             {
               imgSrc: p4,
               title: 'INFRARED COOKTOP',
-              description: 'world chef Infrared Cooktop Matte Finish 2000W'
+              description: 'MODEL NO : SK2000 ',
+              features: [
+                '3 preset menu',
+                'Adjustable power mode',
+                'Feather touch Control dial',
+                'Infrared heating coil',
+                'Made of high quality ceramic',
+                'Stainless-steel frame that\'s easy to clean',
+                'Suitable for all kinds of utensils'
+              ]
             },
             {
               imgSrc: p5,
               title: 'INFRARED COOKTOP',
-              description: 'world chef Infrared Cooktop Matte Finish 2000W'
+              description: 'MODEL NO : SK3000 ',
+              features: [
+                '3 preset menu',
+                'Adjustable power mode',
+                'Feather touch Control dial',
+                'Infrared heating coil',
+                'Made of high quality ceramic',
+                'Stainless-steel frame that\'s easy to clean',
+                'Suitable for all kinds of utensils'
+              ]
             },
             {
               imgSrc: p6,
               title: 'INFRARED COOKTOP',
-              description: 'world chef Infrared Cooktop Matte Finish 2000W'
+              description: 'MODEL NO : SK1001 ',
+              features: [
+                '3 preset menu',
+                'Adjustable power mode',
+                'Feather touch Control dial',
+                'Infrared heating coil',
+                'Made of high quality ceramic',
+                'Stainless-steel frame that\'s easy to clean',
+                'Suitable for all kinds of utensils'
+              ]
             },
             
   ];
@@ -173,35 +227,51 @@ const HomePage = () => {
       </div>
 
       {/* Product Section */}
-      <div className=" py-8 px-4 mt-10" id="products" ref={(el) => (sectionsRef.current['products'] = el)}>
-        <h1 className={`animate__animated text-5xl font-bold text-center mb-8 ${activeSection === 'products' ? 'animate__fadeInUp' : ''}`}>Products</h1>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8">
-            {productData.map((product, index) => (
-              <div
-                key={index}
-                className={`bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center p-6 space-y-4 w-full ${activeSection === 'products' ? 'animate__animated animate__fadeInUp' : ''}`}
-              >
-                <img
-                  src={product.imgSrc}
-                  alt={product.title}
-                  className=" cursor-pointer w-full h-64 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300 ease-in-out"
-                />
-                <h1 className="text-xl font-semibold">{product.title}</h1>
-                <p className="text-gray-700">{product.description}</p>
-                <a
-                  href="https://wa.me/+918130405294" // Replace with your WhatsApp number
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
-                >
-                  <span>Enquiry Now</span>
-                </a>
-              </div>
-            ))}
+      <div className="py-8 px-4 mt-10" id="products" ref={(el) => (sectionsRef.current['products'] = el)}>
+  <h1 className={`animate__animated text-5xl font-bold text-center mb-8 ${activeSection === 'products' ? 'animate__fadeInUp' : ''}`}>Products</h1>
+  <div className="flex justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8">
+      {productData && productData.length > 0 ? (
+        productData.map((product, index) => (
+          <div  
+            key={index}
+            className={`bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center p-6 space-y-4 w-full ${activeSection === 'products' ? 'animate__animated animate__fadeInUp' : ''}`}
+          >
+            <img
+              src={product.imgSrc}
+              alt={product.title}
+              className="cursor-pointer w-full h-64 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300 ease-in-out"
+            />
+            <h1 className="text-xl font-semibold">{product.title}</h1>
+            <p className="text-gray-700">{product.description}</p>
+
+            {/* Features Section */}
+            <h3 className="text-lg font-medium mt-4">Features</h3>
+            <ul className="list-disc list-inside text-gray-600">
+              {product.features && product.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+
+            {/* Enquiry Button */}
+            <a
+              href="https://wa.me/+918130405294" // Replace with your WhatsApp number
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
+            >
+              <span>Enquiry Now</span>
+            </a>
           </div>
-        </div>
-      </div>
+        ))
+      ) : (
+        <p className="text-center text-gray-500">No products available</p>
+      )}
+    </div>
+  </div>
+</div>
+
+
 
       {/* Features Section */}
       <div className="container mx-auto px-16 py-16 rounded-sm shadow-md mt-20" id="features" ref={(el) => (sectionsRef.current['features'] = el)}>
