@@ -17,15 +17,18 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#f0f0f0] text-black fixed w-full top-0 left-0 z-50 shadow-md ">
-      <div className="container mx-auto flex items-center justify-between p-4 h-24">
+      <div className="container mx-auto flex items-center justify-between p-4 h-20">
         {/* Logo */}
         <div className="text-xl font-bold">
-          <Link to="/" onClick={handleScrollToTop} className="flex items-center">
-            <img src={logo} alt="Logo" className="lg:w-64 lg:h-64 w-1/2 h-1/2 mr-2 lg:mb-4 mt-3" />
-            {/* <img src={logo} alt="Logo" className="lg:w-64 lg:h-64  md:w-64 md:h-64 md:ml-[-70px]  w-1/2 h-1/2 mr-2 lg:mb-4" /> */}
-            {/* <span>Logo</span> */}
-          </Link>
+            <Link to="/" onClick={handleScrollToTop} className="flex items-center">
+              <img 
+                src={logo} 
+                alt="Logo" 
+                className="w-52 h-52 sm:w-52 sm:h-52 md:w-40 md:h-40 lg:w-56 lg:h-56 mr-2 lg:mt-4 lg:mb-4"
+              />
+            </Link>
         </div>
+
 
         {/* Hamburger Icon */}
         <div className="md:hidden relative">

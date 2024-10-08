@@ -14,7 +14,7 @@ const App = () => (
   <Router>
     <div>
       <Navbar />
-      <div className="pt-24">
+      <div className="pt-20">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductsPage />} />

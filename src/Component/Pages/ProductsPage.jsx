@@ -7,7 +7,7 @@ import pBanner from '../../Images/pBanner.jpg';
 import p1 from '../../Images/worldchefp1.jpeg';
 import p2 from '../../Images/worldchefp2.jpeg';
 import p3 from '../../Images/worldchefp3.jpeg';
-import p7 from '../../Images/worldchefp4.jpeg';
+import p7 from '../../Images/worldchefp4.png';
 import p8 from '../../Images/worldchefp5.png';
 import p9 from '../../Images/kproductp6.png';
 import p12 from '../../Images/worldchefp7.png';
