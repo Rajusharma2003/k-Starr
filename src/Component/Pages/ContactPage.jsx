@@ -109,7 +109,7 @@ const ContactPage = () => {
       </div>
 
       {/* Google Map */}
-      <div className="md:w-1/2 w-full h-[460px] flex justify-center">
+      <div className="md:w-1/2 w-full h-[490px] flex justify-center">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.3912275929997!2d77.146119!3d28.737734000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01b20e6a2e19%3A0x8aa5fc0b71887ad0!2sBajaj%20Enterprises!5e0!3m2!1sen!2sin!4v1726222642202!5m2!1sen!2sin"
           className="w-full h-full rounded-lg shadow-lg"

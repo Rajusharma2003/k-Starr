@@ -4,18 +4,18 @@ import { FaCheck } from 'react-icons/fa';
 
 // import image.
 import pBanner from '../../Images/pBanner.jpg';
-import p1 from '../../Images/worldchefp1.jpeg';
-import p2 from '../../Images/worldchefp2.jpeg';
-import p3 from '../../Images/worldchefp3.jpeg';
+import p1 from '../../Images/worldchefp1.png';
+import p2 from '../../Images/worldchefp2.png';
+import p3 from '../../Images/worldchefp3.png';
 import p7 from '../../Images/worldchefp4.png';
 import p8 from '../../Images/worldchefp5.png';
 import p9 from '../../Images/kproductp6.png';
 import p12 from '../../Images/worldchefp7.png';
-import p4 from '../../Images/p2.jpg';
-import p10 from '../../Images/p3.jpg';
-import p5 from '../../Images/P4.jpg';
-import p11 from '../../Images/kp1.jpg';
-import p6 from '../../Images/P6.jpg';
+import p4 from '../../Images/p2.png';
+import p10 from '../../Images/p3.png';
+import p5 from '../../Images/P4.png';
+import p11 from '../../Images/kp1.png';
+import p6 from '../../Images/P6.png';
 
 
 // import footer here.
