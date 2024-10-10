@@ -137,7 +137,7 @@ const Footer = () => {
 {/* This is the telephone calling  */}
       <div className="fixed bottom-8 left-10 flex items-center">
   <a
-    href="tel:+919335035215"
+    href="tel:+918130405294"
     className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-transform duration-300"
     target="_blank"
     rel="noopener noreferrer"
@@ -153,7 +153,7 @@ const Footer = () => {
    {/* WhatsApp Icon */}
    <div className="fixed bottom-24 right-10 flex flex-col items-center">
         <a
-          href="https://wa.me/8178196053"
+          href="https://wa.me/8130405294"
           className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-transform duration-300"
           target="_blank"
           rel="noopener noreferrer"
