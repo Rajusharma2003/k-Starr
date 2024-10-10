@@ -24,7 +24,7 @@ const Navbar = () => {
               <img 
                 src={logo} 
                 alt="Logo" 
-                className="w-52 h-52 sm:w-52 sm:h-52 md:w-40 md:h-40 lg:w-56 lg:h-56 mr-2 lg:mt-4 lg:mb-4"
+                className="w-52 h-52 sm:w-52 sm:h-52 md:w-40 md:h-40 lg:w-56 lg:h-56 ml-[-30px] lg:mt-4 lg:mb-4"
               />
             </Link>
         </div>

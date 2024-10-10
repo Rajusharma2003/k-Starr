@@ -129,7 +129,7 @@ const HomePage = () => {
     },
     {
       title: "INFRARED COOKTOP",
-      description: "MODEL NO : SK1100 ",
+      description: "MODEL NO : SK1200 ",
       features: [
         "3 preset menu",
         "Adjustable power mode",
@@ -153,7 +153,7 @@ const HomePage = () => {
     },
     {
       title: "INFRARED COOKTOP",
-      description: "MODEL NO : SK1100 ",
+      description: "MODEL NO : SK2000 ",
       features: [
         "3 preset menu",
         "Adjustable power mode",
@@ -167,7 +167,7 @@ const HomePage = () => {
     },
     {
       title: "INFRARED COOKTOP",
-      description: "MODEL NO : SK1100 ",
+      description: "MODEL NO : SK3000 ",
       features: [
         "3 preset menu",
         "Adjustable power mode",
@@ -181,7 +181,7 @@ const HomePage = () => {
     },
     {
       title: "INFRARED COOKTOP",
-      description: "MODEL NO : SK1100 ",
+      description: "MODEL NO : SK1001 ",
       features: [
         "3 preset menu",
         "Adjustable power mode",

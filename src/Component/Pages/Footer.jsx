@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import { FaArrowUp, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 // import { MdLocationOn, MdPhone, MdEmail  } from 'react-icons/md';
 // import image.
@@ -132,6 +132,43 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+
+{/* This is the telephone calling  */}
+      <div className="fixed bottom-8 left-10 flex items-center">
+  <a
+    href="tel:+919335035215"
+    className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-transform duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="https://img.icons8.com/?size=100&id=53438&format=png&color=ffffff"
+      alt="Call Icon"
+      className="w-8 h-8"
+    />
+  </a>
+</div>
+
+   {/* WhatsApp Icon */}
+   <div className="fixed bottom-24 right-10 flex flex-col items-center">
+        <a
+          href="https://wa.me/8178196053"
+          className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-transform duration-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaWhatsapp className="text-3xl" />
+        </a>
+      </div>
+
+       {/* Scroll to Top Button */}
+       <button
+        onClick={handleScrollToTop}
+        className="fixed bottom-8 right-10 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
+      >
+        <FaArrowUp className="text-2xl" />
+      </button>
     </footer>
     
 
