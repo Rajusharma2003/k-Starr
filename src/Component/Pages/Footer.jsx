@@ -119,7 +119,7 @@ const Footer = () => {
           <div className="flex justify-between items-center">
             <div className="w-1/2" style={{ zIndex: 0 }}>
               <div className="copyright text-white">
-                <p>© 2024 K-STARR HOME APPLIANCES</p>
+                <p>© 2025 K-STARR - A PART OF SHAHJAB GROUP</p>
               </div>
             </div>
             <div className="w-1/2 flex justify-end" style={{ zIndex: 0 }}>
